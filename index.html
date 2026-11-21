@@ -1,1 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verma Mobile & Cyber Cafe - Marh | Mobile Repairing, Accessories & Online Services</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .pulse-subtle {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(37, 99, 235, 0.4); }
+            50% { border-color: rgba(37, 99, 235, 1); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
+    <!-- Top Announcement & Status Bar -->
+    <div class="bg-brand-900 text-white text-xs sm:text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500 text-white animate-pulse">
+                    <span class="w-2 h-2 mr-1 bg-white rounded-full"></span> OPEN NOW
+                </span>
+                <span class="text-slate-300">📍 Opp. Govt. Hr. Sec. School, Marh, Jammu</span>
+            </div>
+            <div class="flex items-center space-x-4 text-xs font-medium">
+                <span class="hidden md:inline text-amber-300">⚡ Instant Screen Replacement & Urgent Job Form Filling</span>
+                <a href="tel:+919876543210" class="hover:text-amber-400 transition flex items-center gap-1 font-bold">
+                    <i class="fa-solid fa-phone text-xs"></i> +91 98765 43210
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Shop Logo / Branding -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brand-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-extrabold text-2xl tracking-tight text-slate-900">VERMA<span class="text-brand-600">MOBILE</span></span>
+                        </div>
+                        <p class="text-xs font-medium text-slate-500 flex items-center gap-1">
+                            <span>Repairing</span> • <span>Accessories</span> • <span>Online Forms</span>
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-slate-700">
+                    <a href="#home" class="hover:text-brand-600 transition">Home</a>
+                    <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                    <a href="#online-forms" class="hover:text-brand-600 transition flex items-center gap-1">
+                        Online Forms <span class="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">NEW</span>
+                    </a>
+                    <a href="#estimator" class="hover:text-brand-600 transition">Repair Estimator</a>
+                    <a href="#contact" class="hover:text-brand-600 transition">Contact & Timings</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/919876543210?text=Hello%20Verma%20Mobile,%20I%20have%20an%20inquiry." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                    </a>
+                    <a href="tel:+919876543210" class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Shop
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-100 font-semibold">Home</a>
+            <a href="#services" class="mobile-nav-link block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-100 font-semibold">All Services</a>
+            <a href="#online-forms" class="mobile-nav-link block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-100 font-semibold">Online Job Forms</a>
+            <a href="#estimator" class="mobile-nav-link block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-100 font-semibold">Repair Cost Estimator</a>
+            <a href="#contact" class="mobile-nav-link block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-100 font-semibold">Shop Address & Contact</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="https://wa.me/919876543210?text=Hello%20Verma%20Mobile," target="_blank" class="w-full text-center bg-emerald-600 text-white py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="tel:+919876543210" class="w-full text-center bg-brand-600 text-white py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call +91 98765 43210
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-b from-slate-900 via-brand-900 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/20 border border-brand-400/30 text-amber-300 text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-shop"></i> Right Opposite Govt. Hr. Sec. School, Marh
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Aapka Trusted Mobile Repair & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">Online Hub</span> in Marh!
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Instant Mobile Repairing, Original Accessories, Urgent Photostat & Lamination, plus 100% accurate JKSSB, SSC & Online Job Form Filling.
+                    </p>
+
+                    <!-- Key Feature Highlights -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center gap-3">
+                            <i class="fa-solid fa-screwdriver-wrench text-amber-400 text-xl"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-100">Quick Repair</h4>
+                                <p class="text-[11px] text-slate-300">Screen & Battery</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center gap-3">
+                            <i class="fa-solid fa-file-pen text-amber-400 text-xl"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-100">Job Forms</h4>
+                                <p class="text-[11px] text-slate-300">JKSSB / SSC / Edu</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center gap-3 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-print text-amber-400 text-xl"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-100">HD Printing</h4>
+                                <p class="text-[11px] text-slate-300">Print & Lamination</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#quick-booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-amber-500/30 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bolt"></i> Book Service / Inquiry
+                        </a>
+                        <a href="https://wa.me/919876543210?text=Hi%20Verma%20Mobile,%20I%20want%20to%20ask%20about%20a%20service." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-emerald-600/30 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Card / Quick Showcase -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-800/80 backdrop-blur-md border border-slate-700 p-6 rounded-2xl shadow-2xl space-y-5">
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-sm">Shop Operating Hours</h3>
+                                    <p class="text-xs text-slate-400">Open 7 Days a Week</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+                                8:30 AM - 8:30 PM
+                            </span>
+                        </div>
+
+                        <!-- Live Job Updates Widget -->
+                        <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700/60">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bell animate-bounce text-amber-400"></i> Active Online Forms
+                                </span>
+                                <span class="text-[10px] text-slate-400">Apply Here Today</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-slate-200">
+                                <li class="flex items-center justify-between bg-slate-800 p-2 rounded border border-slate-700">
+                                    <span><i class="fa-solid fa-angle-right text-brand-400 mr-1.5"></i> JKSSB Recruitment Forms</span>
+                                    <span class="text-[10px] bg-brand-500 text-white px-1.5 py-0.5 rounded">Active</span>
+                                </li>
+                                <li class="flex items-center justify-between bg-slate-800 p-2 rounded border border-slate-700">
+                                    <span><i class="fa-solid fa-angle-right text-brand-400 mr-1.5"></i> SSC / Army / Police Bharti</span>
+                                    <span class="text-[10px] bg-brand-500 text-white px-1.5 py-0.5 rounded">Active</span>
+                                </li>
+                                <li class="flex items-center justify-between bg-slate-800 p-2 rounded border border-slate-700">
+                                    <span><i class="fa-solid fa-angle-right text-brand-400 mr-1.5"></i> JKBOSE & College Admissions</span>
+                                    <span class="text-[10px] bg-amber-500 text-slate-950 font-bold px-1.5 py-0.5 rounded">Open</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Address Callout Card -->
+                        <div class="bg-gradient-to-r from-brand-900 to-slate-800 p-4 rounded-xl border border-brand-500/30 flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-red-400 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Location Landmark</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">Right Opposite Govt. Hr. Secondary School, Main Road, Marh</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-600 font-extrabold text-sm uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Our Core Services</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Hum Kya-Kya Kaam Karte Hain?</h2>
+                <p class="text-slate-600 mt-2 text-base">Mobile repair se lekar online job form filling tak, aapke saare kaam ek hi chhat ke niche!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service Card 1: Mobile Repairing -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-mobile-retro"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mobile Repairing</h3>
+                        <p class="text-slate-600 text-sm mb-4">All Brands (Samsung, Realme, Vivo, Oppo, Xiaomi, iPhone) repair available.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Folder / Screen Replacement</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Original Battery Change</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Charging Jack & Speaker Repair</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Software Flash & Pattern Unlock</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Water Damage Repair</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200">
+                        <a href="#quick-booking" onclick="preselectService('Mobile Repair')" class="text-brand-600 font-bold text-xs hover:text-brand-700 flex items-center justify-between">
+                            <span>Inquire Repair Cost</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Mobile Accessories -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mobile Accessories</h3>
+                        <p class="text-slate-600 text-sm mb-4">Top quality guaranteed accessories at pocket-friendly prices.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Fast Chargers & Type-C Cables</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Earphones & Bluetooth Neckbands</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> 11D Matte & Glass Tempered</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Stylish Back Covers & Cases</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Smartwatches & Memory Cards</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200">
+                        <a href="#quick-booking" onclick="preselectService('Accessories')" class="text-brand-600 font-bold text-xs hover:text-brand-700 flex items-center justify-between">
+                            <span>Check Accessories Stock</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Photostat & Printing -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Photostat & Printouts</h3>
+                        <p class="text-slate-600 text-sm mb-4">High Quality document printing and durable protective lamination.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> B/W & Color Photostat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> HD Document Printing (PDF / Word)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Document Lamination</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Urgent Passport Size Photos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> High Resolution Document Scanning</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200">
+                        <a href="#quick-booking" onclick="preselectService('Printing & Photostat')" class="text-brand-600 font-bold text-xs hover:text-brand-700 flex items-center justify-between">
+                            <span>Print Inquiry</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Online Forms & Cyber Services -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Popular</span>
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-laptop-file"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Online Job Forms</h3>
+                        <p class="text-slate-600 text-sm mb-4">Accurate form filling for all Government jobs & educational admissions.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> JKSSB, SSC & Railway Forms</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Army, Police & Paramilitary Bharti</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> JKBOSE & College Admissions</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Scholarship & PM-Kisan Forms</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Aadhaar Print & PAN Card Online</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200">
+                        <a href="#online-forms" class="text-brand-600 font-bold text-xs hover:text-brand-700 flex items-center justify-between">
+                            <span>View Active Forms List</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section: Repair Cost & Time Estimator -->
+    <section id="estimator" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="text-amber-600 font-extrabold text-xs uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Instant Estimate Tool</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Mobile Repairing Time & Cost Estimator</h2>
+                    <p class="text-slate-600 text-sm mt-1">Select your issue to check estimated time and process.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">1. Select Device Brand</label>
+                            <select id="brandSelect" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="Samsung">Samsung</option>
+                                <option value="Realme/Oppo/Vivo">Realme / Oppo / Vivo</option>
+                                <option value="Xiaomi/Redmi/POCO">Xiaomi / Redmi / POCO</option>
+                                <option value="OnePlus">OnePlus</option>
+                                <option value="iPhone">Apple iPhone</option>
+                                <option value="Other">Other Brand</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">2. Select Repair Issue</label>
+                            <select id="issueSelect" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="screen" data-time="30 - 45 Minutes" data-note="Screen/Folder replacement with warranty option.">Broken Screen / Folder Display</option>
+                                <option value="battery" data-time="20 - 30 Minutes" data-note="High quality original battery replacement.">Battery Draining Fast / Dead</option>
+                                <option value="charging" data-time="15 - 25 Minutes" data-note="Charging CC board or Jack replacement.">Charging Port / Jack Fault</option>
+                                <option value="software" data-time="30 - 60 Minutes" data-note="Software flashing, hanging issue, pattern lock reset.">Software Stuck / Pattern Lock</option>
+                                <option value="speaker" data-time="20 - 30 Minutes" data-note="Ringer speaker or ear speaker replacement.">No Sound / Mic / Speaker Repair</option>
+                                <option value="water" data-time="Same Day Inspection" data-note="Complete mother board cleaning and liquid damage restoration.">Water Damage / Phone Not Turning On</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="calculateEstimate()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl shadow transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-calculator"></i> Calculate Repair Details
+                        </button>
+                    </div>
+
+                    <!-- Output Card -->
+                    <div class="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800 space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Estimated Time</span>
+                            <span id="estTime" class="text-amber-400 font-extrabold text-lg">30 - 45 Minutes</span>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Repair Notes</span>
+                            <p id="estNote" class="text-slate-200 text-xs sm:text-sm leading-relaxed">Screen/Folder replacement with warranty option available.</p>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl text-xs text-slate-300 border border-slate-700">
+                            💡 <strong>Verma Mobile Guarantee:</strong> Genuine parts used, affordable pricing & fast repair right in front of you!
+                        </div>
+                        <a id="estWhatsappBtn" href="https://wa.me/919876543210?text=Hi%20Verma%20Mobile,%20I%20want%20to%20know%20the%20exact%20price%20for%20Samsung%20Screen%20replacement." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-xs sm:text-sm">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Get Exact Price on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Job Forms Notice Section -->
+    <section id="online-forms" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-emerald-600 font-extrabold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Cyber Cafe Services</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Latest Online Forms & Services Center</h2>
+                    <p class="text-slate-600 text-sm mt-1">Marh ke students ke liye bina kisi mistake ke fast form filling!</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="text-xs text-slate-500 font-medium">📍 Visit us opposite Govt. Hr. Sec. School Marh</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Box 1 -->
+                <div class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-2xl p-6 shadow-md border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-500 text-slate-950 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase">Govt Jobs</span>
+                            <i class="fa-solid fa-briefcase text-amber-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">JKSSB / SSC / Railway Forms</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-4">JKSSB Constable, Panchayat Secretary, SSC CGL/CHSL/GD Constable, Railway Recruitment online form filling with accurate photo & signature resizing.</p>
+                    </div>
+                    <a href="https://wa.me/919876543210?text=Hello%20Verma%20Mobile,%20mujhe%20Govt%20Job%20Form%20fill%20karwana%20hai." target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-center py-2.5 rounded-xl font-bold text-xs transition">
+                        Form Details Puchhein
+                    </a>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-2xl p-6 shadow-md border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-emerald-500 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase">Education</span>
+                            <i class="fa-solid fa-graduation-cap text-emerald-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">School & College Admissions</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-4">JKBOSE Board Exam Forms, Jammu University Admissions, Scholarship Forms (NSP), Roll No Slip Downloads & Result Printouts.</p>
+                    </div>
+                    <a href="https://wa.me/919876543210?text=Hello%20Verma%20Mobile,%20College/School%20form%20ki%20inquiry%20hai." target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-center py-2.5 rounded-xl font-bold text-xs transition">
+                        Admission Inquiry
+                    </a>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-2xl p-6 shadow-md border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-purple-500 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase">Govt Cards</span>
+                            <i class="fa-solid fa-id-card text-purple-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Aadhaar, PAN & Online Services</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-4">New PAN Card application, Aadhaar Card downloading & PVC Card printing, Ayushman Card printouts, E-Shram, & Resume making.</p>
+                    </div>
+                    <a href="https://wa.me/919876543210?text=Hello%20Verma%20Mobile,%20PAN/Aadhaar%20service%20chahiye." target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-center py-2.5 rounded-xl font-bold text-xs transition">
+                        Card Services Info
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Service Booking / Contact Form Section -->
+    <section id="quick-booking" class="py-16 bg-slate-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-800/90 rounded-3xl p-6 sm:p-10 border border-slate-700 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="bg-brand-500/20 text-brand-400 text-xs font-bold px-3 py-1 rounded-full border border-brand-500/30">Fast Response</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-2">Book a Service / Direct Inquiry</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-1">Apni inquiry bhejein, hum aapko turant call ya WhatsApp par answer karenge!</p>
+                </div>
+
+                <form id="inquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Aapka Naam (Your Name) *</label>
+                            <input type="text" id="custName" required placeholder="Ex: Rahul Kumar" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+                            <input type="tel" id="custPhone" required placeholder="Ex: 9876543210" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Service Type *</label>
+                            <select id="custService" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="Mobile Repairing">Mobile Repairing (Screen, Battery, Jack)</option>
+                                <option value="Accessories">Mobile Accessories (Charger, Glass, Cover)</option>
+                                <option value="Online Job Form">Online Job Form Filling (JKSSB, SSC)</option>
+                                <option value="Printing & Lamination">Photostat / Lamination / Document Print</option>
+                                <option value="Other Service">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Mobile Model / Details</label>
+                            <input type="text" id="custDetails" placeholder="Ex: Vivo Y20 screen repair or JKSSB Form" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Message (Optional)</label>
+                        <textarea id="custMsg" rows="3" placeholder="Koi special request ya timing..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold py-3.5 rounded-xl transition shadow-lg text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Send Inquiry via WhatsApp
+                    </button>
+                </form>
+
+                <!-- Feedback Toast (No alert window) -->
+                <div id="formToast" class="hidden mt-4 p-4 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 text-xs text-center font-medium">
+                    ✅ Redirecting to WhatsApp with your inquiry details...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Location Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Shop Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-brand-600 font-extrabold text-xs uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Visit Our Shop</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Verma Mobile Marh</h2>
+                        <p class="text-slate-600 text-sm mt-1">Aapki apni trusted shop opposite Higher Secondary School, Marh.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Full Address</h4>
+                                <p class="text-slate-600 text-xs mt-0.5 leading-relaxed">
+                                    Verma Mobile, Opposite Government Higher Secondary School, Main Market Marh, District Jammu, J&K - 181206.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Phone & WhatsApp</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">
+                                    Call: <a href="tel:+919876543210" class="text-brand-600 font-bold hover:underline">+91 98765 43210</a>
+                                </p>
+                                <p class="text-slate-600 text-xs">
+                                    WhatsApp: <a href="https://wa.me/919876543210" target="_blank" class="text-emerald-600 font-bold hover:underline">Click to Chat</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Working Hours</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Monday to Sunday: <strong>8:30 AM – 8:30 PM</strong></p>
+                                <p class="text-xs text-emerald-600 font-semibold mt-1">Open 7 days a week for customer convenience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Landmark Card & Map Representation -->
+                <div class="lg:col-span-7">
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-700">
+                        <div class="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Easy Shop Landmark</h3>
+                                <p class="text-xs text-slate-400">Right across the main gate of Govt. Hr. Sec. School Marh</p>
+                            </div>
+                            <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                                Easy Access
+                            </span>
+                        </div>
+
+                        <!-- Graphical Location Landmark Diagram -->
+                        <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 space-y-4 mb-6">
+                            <div class="flex items-center justify-between text-xs font-bold text-slate-300 border-b border-slate-800 pb-2">
+                                <span><i class="fa-solid fa-road text-amber-400 mr-1"></i> Main Road Marh</span>
+                                <span>Opposite View</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 text-center py-2">
+                                <div class="bg-slate-800/90 p-4 rounded-xl border border-blue-500/40">
+                                    <div class="text-blue-400 text-2xl mb-1"><i class="fa-solid fa-school"></i></div>
+                                    <div class="font-bold text-xs">Govt. Hr. Sec. School</div>
+                                    <div class="text-[10px] text-slate-400">Marh, Jammu</div>
+                                </div>
+                                
+                                <div class="bg-brand-900/90 p-4 rounded-xl border border-amber-400/60 shadow-lg relative">
+                                    <span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-extrabold px-2 py-0.5 rounded-full">YOU ARE HERE</span>
+                                    <div class="text-amber-400 text-2xl mb-1"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                                    <div class="font-bold text-xs text-white">VERMA MOBILE</div>
+                                    <div class="text-[10px] text-amber-200">Opposite School Gate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="https://maps.google.com/?q=Marh+Jammu" target="_blank" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl text-center text-xs sm:text-sm transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-map-location-dot"></i> Open Directions in Google Maps
+                            </a>
+                            <a href="tel:+919876543210" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center text-xs sm:text-sm transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-headset"></i> Call for Location Assistance
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                <div>
+                    <span class="font-bold text-white text-lg tracking-tight">VERMA<span class="text-brand-500">MOBILE</span></span>
+                    <p class="text-xs text-slate-500 mt-1">Mobile Repairing, Accessories, Photostat, Lamination & Online Form Services in Marh.</p>
+                </div>
+                <div class="text-xs text-slate-500">
+                    &copy; <span id="year"></span> Verma Mobile Marh. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Sticky Action Bar for Mobile -->
+    <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/919876543210?text=Hi%20Verma%20Mobile,%20I%20have%20a%20query." target="_blank" class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition hover:scale-110 pulse-subtle" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <!-- Floating Call -->
+        <a href="tel:+919876543210" class="w-14 h-14 bg-brand-600 hover:bg-brand-700 text-white rounded-full flex items-center justify-center text-xl shadow-2xl transition hover:scale-110" title="Call Now">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile drawer when clicking a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Repair Estimator Logic
+        function calculateEstimate() {
+            const brand = document.getElementById('brandSelect').value;
+            const issueSelect = document.getElementById('issueSelect');
+            const selectedOption = issueSelect.options[issueSelect.selectedIndex];
+            
+            const time = selectedOption.getAttribute('data-time');
+            const note = selectedOption.getAttribute('data-note');
+            const issueText = selectedOption.text;
+
+            document.getElementById('estTime').textContent = time;
+            document.getElementById('estNote').textContent = `${brand} - ${note}`;
+
+            // Update WhatsApp link inside estimator
+            const waMsg = `Hi Verma Mobile, I want estimate for ${brand} - ${issueText}.`;
+            document.getElementById('estWhatsappBtn').href = `https://wa.me/919876543210?text=${encodeURIComponent(waMsg)}`;
+        }
+
+        // Preselect Service in Contact Form
+        function preselectService(serviceName) {
+            const selectElem = document.getElementById('custService');
+            if(selectElem) {
+                for (let i = 0; i < selectElem.options.length; i++) {
+                    if (selectElem.options[i].value.includes(serviceName)) {
+                        selectElem.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Handle Quick Booking / Inquiry Form Submit
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const service = document.getElementById('custService').value;
+            const details = document.getElementById('custDetails').value.trim();
+            const msg = document.getElementById('custMsg').value.trim();
+
+            const toast = document.getElementById('formToast');
+            toast.classList.remove('hidden');
+
+            const waText = `*New Inquiry from Website*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n🛠️ *Service:* ${service}\n📱 *Details:* ${details || 'N/A'}\n💬 *Message:* ${msg || 'N/A'}`;
+            
+            const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(waText)}`;
+
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                toast.classList.add('hidden');
+                document.getElementById('inquiryForm').reset();
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
